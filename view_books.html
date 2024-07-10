@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Library Catalog</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Author</th>
+    </tr>
+    {% for book in books %}
+    <tr>
+        <td>{{ book[0] }}</td>
+        <td>{{ book[1] }}</td>
+        <td>{{ book[2] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="{{ url_for('add_book') }}">Add a Book</a>
+<a href="{{ url_for('index') }}">Back to Home</a>
+{% endblock %}

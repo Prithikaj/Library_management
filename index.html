@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Welcome to the Library Management System</h2>
+<p><a href="{{ url_for('add_book') }}">Add a Book</a></p>
+<p><a href="{{ url_for('view_books') }}">View Books</a></p>
+{% endblock %}
